@@ -1,0 +1,39 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  width: 100%;
+  &__logo {
+    margin-left: 2rem;
+    width: 33%;
+    color: $green;
+    font-style: normal;
+    letter-spacing: 0.25;
+    text-transform: uppercase;
+    @include handleText(2.1875rem, 1.2, 800);
+  }
+  &__copy-right {
+    margin-right: 0rem;
+
+    width: 33%;
+
+    text-align: center;
+  }
+  &__icons {
+    margin-right: 0rem;
+
+    width: 33%;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}

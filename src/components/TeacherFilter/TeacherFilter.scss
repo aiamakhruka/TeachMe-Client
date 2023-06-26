@@ -1,0 +1,12 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.search-teacher{
+    padding: 1rem 1rem 1rem 5rem;
+    background-color: $White;
+    width: 30%;
+    height: 100%;
+    position: sticky;
+    top:0
+}

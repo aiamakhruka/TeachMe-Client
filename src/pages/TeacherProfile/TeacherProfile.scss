@@ -1,0 +1,190 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+.teacher-header{
+    margin-inline:4rem ;
+    margin-top: 4rem;
+    width: 349px;
+    height: 131px;
+    color: $green;
+    font-weight: 600;
+    font-size: 50px;
+}
+.teacher-profile{
+    width: 1200px;
+    display: flex;
+    margin-inline:2rem ;
+    justify-content: space-between;
+    &__info{
+        text-align: center;
+        justify-content: center;
+        width: 20%;
+        background-color: $green;
+        width: 35rem;
+        height: 899px;
+        border: 3px solid $green ;
+        margin-bottom: 3rem;
+        border-radius: 4px;
+
+    }
+
+    &__profile-image{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        width:140px;
+        object-fit: cover;
+        height: 179px;
+        border-radius: 5%;
+
+    }
+
+    &__inputs{
+        color: $White;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: left;
+        margin-inline: 6rem;
+        margin-bottom: 3rem;
+
+    }
+}
+.teacher-details{
+    width: 1000px;
+    text-align: left;
+
+    &__about-me{
+        background-color: $White;
+        display: flex;
+        border: 1px  solid $green ;
+        padding: 2rem;
+        flex-direction: column;
+        box-shadow: 5px 5px 10px 0px #d4d4d4;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-inline: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        margin-bottom: 2rem;
+        color:$green;
+    }
+    &__about{
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+    }
+}
+
+.teacher-price{
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    background-color: $White;
+    margin-inline: 1rem;
+    max-width: 520px;
+    border: 1px solid $green;
+    padding: 2rem;
+    &__title{
+        color: $green;
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 1rem;
+    }
+    &__price{
+        font-weight: 500;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    &__button{
+        background-color: $green;
+        color: $White;
+        width: 141px;
+        height: 58px;
+        flex-shrink: 0;
+        padding: 0.5rem;
+        border-radius: 32px ;
+    }
+}
+
+.teacher-reviews{
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    background-color: $White;
+    margin-inline: 1rem;
+    border: 1px solid $green;
+    max-width: 294px;
+    height: 200px;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    &__title{
+        color: $green;
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+        margin-bottom: 1rem;
+        margin-left: 6rem;
+    }
+    &__impresion{
+        font-weight: 600;
+        font-size: 30px;
+    }
+}
+
+.reviews{
+    width: 1184px;
+    height: 513px;
+    display: flex;
+    padding: 3rem;
+    max-width: max-width;
+    align-items: center;
+    border: 1px solid $green;
+    flex-direction: column;
+    background-color: $White;
+    justify-content: center;
+    text-align: center;
+    margin-inline:2rem ;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    margin-bottom: 4rem;
+
+    &__header{
+        font-weight: 700;
+        font-size: 3rem;
+        color: $green;
+        margin-bottom: 2rem;
+
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    &__card{
+        margin-inline: 1rem;
+        width: 33%;
+    }
+
+    &__review{
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    &__name{
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+    &__profile-image{
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+}

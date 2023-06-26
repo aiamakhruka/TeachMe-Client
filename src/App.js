@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.scss';
-import HomePage from './pages/HomePage/HomePage';
 import LogInPage from './pages/LogInPage/LogInPage';
-import SignUpPage from './pages/SignUpPage/SignUpPage';
 import FindTeacherPage from './pages/FindTeacherPage/FindTeacherPage';
 import AddTeacherpage from './pages/AddTeacherpage/AddTeacherpage';
+import HomePage from './pages/HomePage/HomePage';
+import TeacherProfile from './pages/TeacherProfile/TeacherProfile';
+import MyPageStudent from './pages/MyPageStudent/MyPageStudent';
+import MyPageTeacher from './pages/MyPageTeacher/MyPageTeacher';
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/login' element={<LogInPage/>}/>
-        <Route path='/signup' element={<SignUpPage/>}/>
         <Route path='/find' element={<FindTeacherPage/>}/>
         <Route path='/add' element={<AddTeacherpage/>}/>
+        <Route path="/add/:currentSignedUpTeacher" element={<AddTeacherpage/>} />
+        <Route path='/teacherprofile' element={<TeacherProfile/>}/>
+        <Route path='/mystudentprofile' element={<MyPageStudent/>}/>
+        <Route path='/myteacherprofile' element={<MyPageTeacher/>}/>
       </Routes>
-      <h1>welcome to TeachMe website</h1>
     </BrowserRouter>
   );
 }
