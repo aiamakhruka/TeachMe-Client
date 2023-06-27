@@ -1,11 +1,9 @@
 import { useState } from "react";
-import axios from 'axios';
-import './AddTeacherpage.scss';
-import CityFilter from '../../components/CityFilter/CityFilter';
+import axios from "axios";
+import "./AddTeacherpage.scss";
+import CityFilter from "../../components/CityFilter/CityFilter";
 import { postTeacherEndpoint } from "../../utils/api";
-import { Link, Navigate, useParams,useNavigate } from 'react-router-dom';
-
-
+import { useParams, useNavigate } from "react-router-dom";
 
 function AddTeacherpage() {
   const { currentSignedUpTeacher } = useParams();
@@ -13,36 +11,73 @@ function AddTeacherpage() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-
-  const formFields = [
-    { id: 'fullName', label: 'Full Name', type: 'text', validation: 'text' },
-    { id: 'age', label: 'Age', type: 'number', validation: { type: 'number', min: 25, max: 60 } },
-    { id: 'specialization', label: 'Specialization', type: 'text', validation: 'text' },
-    { id: 'teachingLevel', label: 'Teaching Level', type: 'select', validation: 'text', options: ['University', 'Elementary', 'High School', 'Middle School'] },
-    { id: 'yearsOfExperience', label: 'Years of Experience', type: 'number', validation: 'number' },
-    { id: 'price', label: 'Class Price', type: 'number', validation: { type: 'number', max: 200 } },
-    { id: 'teachingOption', label: 'Teaching Option', type: 'select', validation: 'text', options: ['Online', 'In Person'] },
-  ];
-
   const [formState, setFormState] = useState({});
   const [errors, setErrors] = useState({});
   const [image, setImage] = useState(null);
-  const [province, setProvince] = useState('');
-  const [city, setCity] = useState('');
+  const [province, setProvince] = useState("");
+  const [city, setCity] = useState("");
+
+  console.log(image);
+  console.log(hasError);
+  console.log(isLoading);
+  const formFields = [
+    { id: "fullName", label: "Full Name", type: "text", validation: "text" },
+    {
+      id: "age",
+      label: "Age",
+      type: "number",
+      validation: { type: "number", min: 25, max: 60 },
+    },
+    {
+      id: "specialization",
+      label: "Specialization",
+      type: "text",
+      validation: "text",
+    },
+    {
+      id: "teachingLevel",
+      label: "Teaching Level",
+      type: "select",
+      validation: "text",
+      options: ["University", "Elementary", "High School", "Middle School"],
+    },
+    {
+      id: "yearsOfExperience",
+      label: "Years of Experience",
+      type: "number",
+      validation: "number",
+    },
+    {
+      id: "price",
+      label: "Class Price",
+      type: "number",
+      validation: { type: "number", max: 200 },
+    },
+    {
+      id: "teachingOption",
+      label: "Teaching Option",
+      type: "select",
+      validation: "text",
+      options: ["Online", "In Person"],
+    },
+    // {"image": image}
+  ];
 
   const validateField = (field, value) => {
-    if (typeof field.validation === 'string') {
+    if (typeof field.validation === "string") {
       switch (field.validation) {
-        case 'text':
+        case "text":
           return value ? null : `${field.label} is required`;
-        case 'number':
-          return value && !isNaN(value) ? null : `Valid ${field.label.toLowerCase()} is required`;
+        case "number":
+          return value && !isNaN(value)
+            ? null
+            : `Valid ${field.label.toLowerCase()} is required`;
         default:
           return null;
       }
     } else {
       const { type, min, max } = field.validation;
-      if (type === 'number') {
+      if (type === "number") {
         if (!value || isNaN(value)) {
           return `Valid ${field.label.toLowerCase()} is required`;
         } else if (min !== undefined && value < min) {
@@ -56,8 +91,8 @@ function AddTeacherpage() {
   };
 
   const handleChange = (e, field) => {
-    const value = field.id === 'image' ? e.target.files[0] : e.target.value;
-    if (field.id === 'image') {
+    const value = field.id === "image" ? e.target.files[0] : e.target.value;
+    if (field.id === "image") {
       setImage(value);
     } else {
       setFormState({
@@ -102,19 +137,30 @@ function AddTeacherpage() {
         province: province,
         city: city,
       };
+      let fd = new FormData();
+      // const keys =   Object.keys(formFieldsData)
 
-      
+      // for (let i = 0; i < keys.length; i++) {
+      //   console.log(keys)
+      //   fd.append(keys[i],formFieldsData[keys[i]])
+      // }
+      // fd.append("image", e.target.image.files[0]);
+      fd.append("image", e.target.image.files[0]);
+
       // Add the currentSignedUpTeacher value to formFieldsData
-      formFieldsData.currentSignedUpTeacher = currentSignedUpTeacher;
-      console.log(formFieldsData)
+      // fd.append("currentSignedUpTeacher", currentSignedUpTeacher) ;
+      console.log(fd);
       axios
-        .post(postTeacherEndpoint, formFieldsData)
+        .post(postTeacherEndpoint, fd, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
         .then((response) => {
           setIsLoading(false);
           setFormState({});
           setImage(null);
           console.log(response.data);
-          navigate('/myteacherprofile');
+          navigate(`/myteacherprofile/${currentSignedUpTeacher}`); //navigate to teacher profile with id
+          // navigate('/myteacherprofile');
         })
         .catch((error) => {
           setIsLoading(false);
@@ -125,22 +171,24 @@ function AddTeacherpage() {
   };
 
   return (
-
-    <form method='POST' encType='multipart/form-data' onSubmit={handleSubmit}>
-      <input type='file' name='image' onChange={(e) => handleChange(e, { id: 'image' })} />
+    <form onSubmit={handleSubmit}>
+      {/* <form method='POST' encType='multipart/form-data' onSubmit={handleSubmit}> */}
+      <input type="file" accept="image/*" name="image" />
       <div className="form-row">
-        {formFields.map(field => (
+        {formFields.map((field) => (
           <div className="form-field" key={field.id}>
             <label htmlFor={field.id}>{field.label}</label>
-            {field.type === 'select' ? (
+            {field.type === "select" ? (
               <select
                 id={field.id}
                 onChange={(e) => handleChange(e, field)}
-                value={formState[field.id] || ''}
+                value={formState[field.id] || ""}
               >
                 <option value="">Select an option</option>
-                {field.options.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {field.options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
             ) : (
@@ -148,7 +196,7 @@ function AddTeacherpage() {
                 id={field.id}
                 type={field.type}
                 onChange={(e) => handleChange(e, field)}
-                value={formState[field.id] || ''}
+                value={formState[field.id] || ""}
               />
             )}
             {errors[field.id] && <div>{errors[field.id]}</div>}
@@ -161,9 +209,9 @@ function AddTeacherpage() {
         onProvinceChange={handleProvinceChange}
         onCityChange={handleCityChange}
       />
-    <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
-  )
+  );
 }
 
 export default AddTeacherpage;

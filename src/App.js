@@ -18,6 +18,8 @@ function App() {
         <Route path='/find' element={<FindTeacherPage/>}/>
         <Route path='/add' element={<AddTeacherpage/>}/>
         <Route path="/add/:currentSignedUpTeacher" element={<AddTeacherpage/>} />
+        <Route path="/myteacherprofile/:currentSignedUpTeacher" element={<MyPageTeacher/>} />
+        <Route path="/mystudentprofile/:currentSignedUpStudent" element={<MyPageStudent/>} />
         <Route path='/teacherprofile' element={<TeacherProfile/>}/>
         <Route path='/mystudentprofile' element={<MyPageStudent/>}/>
         <Route path='/myteacherprofile' element={<MyPageTeacher/>}/>
