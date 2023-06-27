@@ -1,70 +1,34 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Teach Me
 
-## Available Scripts
+My project is focused on developing a user-friendly website that connects students with experienced teachers for personalized subject tutoring. The platform will make it easy for students to find qualified teachers who can help them with specific subjects they are interested in. Whether it's math, science, language, or any other subject, the platform will match students with the right teachers who can provide one-on-one guidance and support. The goal is to create a convenient and effective way for students to receive personalized help and enhance their learning experience.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+-Advanced Filtering: Students can easily find teachers by applying multiple filters based on preferences and factors such as subject, availability,location, and expertise.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Booking, Reviews, and Ratings: Students can book teachers, leave reviews, and provide ratings to help others make informed choices.
 
-### `npm run build`
+-Teacher Registration and Service Provision: Teachers can register, create profiles, and offer their services, managing availability and rates for different teaching formats.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Coming soon
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Real-time Communication: The platform will facilitate seamless communication between students and teachers through a built-in messaging system. This feature enables students to ask questions, seek clarification, and receive timely feedback from their teachers. It promotes interactive and effective learning interactions.
 
-### `npm run eject`
+## Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="153" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/6228a3ce-719a-495e-8e10-91fb94b01555">
+<img width="229" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/a4ba2070-27f0-4615-832d-941330148abb">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="232" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/af617318-4eb8-48f3-b653-52e30ac6e980">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="231" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/a980e054-a003-4f96-97b2-d8e5a6db89e5">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="176" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/813acc11-89c3-406f-9ff9-b3ecc8069b36">
 
-## Learn More
+<img width="960" alt="image" src="https://github.com/aiamakhruka/TeachMe-Server/assets/111688154/f952261a-3a64-48a1-9f90-6cb7edc5d739">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
