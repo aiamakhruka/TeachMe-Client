@@ -23,7 +23,6 @@ const CityFilter = ({ onCityChange, onProvinceChange }) => {
     setProvince(selectedProvince);
 
     if (selectedProvince) {
-      const cities = citiesByProvince[selectedProvince];
       setCity('');
       onCityChange(''); // Invoke onCityChange with empty string value
       onProvinceChange(selectedProvince); // Invoke onProvinceChange with selected province value
