@@ -106,7 +106,7 @@ function FindTeacherPage() {
           <Link to={"/find"}>
             <h2 className="navbar__item">Find Teacher</h2>
           </Link>
-          <Link to={"/mystudentprofile"}>
+          <Link to={"/mystudentprofile/1"}>
             <h2 className="navbar__item">My Profile</h2>
           </Link>
           <Link to={"/login"}>

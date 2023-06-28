@@ -6,7 +6,7 @@ import viewer1 from "../../assets/images/viewer1.jpeg";
 import viewer2 from "../../assets/images/viewer2.jpeg";
 import viewer3 from "../../assets/images/viewer3.jpeg";
 import { Link } from 'react-router-dom';
-
+import React from 'react';
 function TeacherProfile() {
   return (
     <>

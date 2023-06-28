@@ -3,30 +3,10 @@ import "./MyPageStudent.scss";
 import myteacher1 from "../../assets/images/my-teacher1.jpeg";
 import myteacher2 from "../../assets/images/my-teacher2.jpeg";
 import aia from "../../assets/images/student3.jpeg";
-import React, { useState, useEffect } from 'react';
-import {Link , useParams } from 'react-router-dom';
-import axios from 'axios';
 
+import { Link } from 'react-router-dom';
 
 function MyPageStudent() {
-    const { id } = useParams(); // get the id from the URL
-    const [studentData, setStudentData] = useState(null);
-  
-      // Fetch student data when component mounts
-  useEffect(() => {
-    const getStudentData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/students/${id}`); // replace with your API endpoint
-        setStudentData(response.data);
-      } catch (error) {
-        console.error("Failed to fetch student data: ", error);
-      }
-    };
-
-    getStudentData();
-  }, [id]);
-
-
   return (
     <>
       <nav className="navbar">
@@ -51,7 +31,7 @@ function MyPageStudent() {
       <h1 className="teacher-header">My Profile</h1>
       <section className="teacher-profile">
         <section className="teacher-profile__info">
-          <img alt="avatar picture" className="teacher-profile__profile-image" src={aia} />
+          <img className="teacher-profile__profile-image" src={aia} />
           <h2 className="teacher-profile__inputs">
             <storage>Full name:</storage>  Aia Makhruka
           </h2>
@@ -83,7 +63,7 @@ function MyPageStudent() {
             <h2 className="my-teacher-header">My Teachers</h2>
             <div className="my-teacher">
             <div >
-            <img alt="avatar picture" className="my-teacher__image" src={myteacher1}/>
+            <img className="my-teacher__image" src={myteacher1}/>
           </div>
           <div className="my-teacher__info">
             <h2 className="my-teacher__name">James Johnson</h2>
@@ -93,7 +73,7 @@ function MyPageStudent() {
           </div>
           <div className="my-teacher">
           <div>
-            <img alt="avatar picture" className="my-teacher__image" src={myteacher2}/>
+            <img className="my-teacher__image" src={myteacher2}/>
           </div>
           <div className="my-teacher__info">
             <h2 className="my-teacher__name">Melanie Ray</h2>

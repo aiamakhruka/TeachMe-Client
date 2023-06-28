@@ -24,8 +24,10 @@ form {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background: #e8e8e8;
-  font-family: $font;
+  background-image: url("../../assets/bg/pic2.jpg");
+  object-fit: cover;
+  background-size: cover;
+    font-family: $font;
   overflow: hidden;
 }
 

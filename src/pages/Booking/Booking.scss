@@ -1,0 +1,140 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: $White;
+  
+
+  &__logo{
+    color:$green ;
+    font-style: normal;
+    letter-spacing: 0.25;
+    text-transform: uppercase;
+    @include handleText(2.1875rem,1.2,800);
+    
+  }
+  &__menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+  }
+  &__item{
+    @include handleText(1.1875rem,1.2,600);
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    color: $green;
+
+
+  }
+  &-login{
+    background-color: $green;
+    color: $White;
+    border-radius: 30px;
+
+  }
+}
+
+.profile-bg{
+    width:100%;
+    // object-fit: cover;
+    // top: 106px;
+    // right: 0;
+    // position: absolute;
+    height: 340px;
+    // left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../../assets/images/bg.jpeg");
+    background-repeat: no-repeat;
+
+    &__avatar{
+        border-radius: 50%;
+        object-fit: cover;
+        width: 166px;
+        top:208px;
+        left:100px;
+        position: absolute;
+        margin-right: 1rem;
+        height: 200px;
+    }
+    &__header{
+        font-size: 60px;
+        position: absolute;
+        top:270px;
+        left:400px;
+        width: 733px;
+        height: 111px;
+        padding-right: 27px;
+        color: rgb(18, 157, 114);
+    }
+}
+.sub-header{
+    text-align: center;
+    color: $White;
+    font-size: 2.5rem;
+    margin: 5rem 8rem 4rem 28rem;
+    width: 360px;
+    background-color: rgb(18, 157, 114);
+}
+
+.lesson-info{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20rem;
+    &__left{
+        display: flex;
+        // flex-wrap: wrap;
+        // width: 100%;
+        color: rgb(18, 157, 114);
+    }
+    &__right{
+        width: 200px;
+        height: 250px;
+    }
+    &__details{
+        width: 33%;
+    }
+    &__headers{
+        margin-bottom: 2rem;
+    }
+}
+
+.request-box{
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    margin-top: 4rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem  ;
+    margin-inline: 8rem;
+    &__header{
+        color: rgb(18, 157, 114);
+        font-size: 2.5rem;
+        margin-inline: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    &__paragraphy{
+        font-size: 1.5rem;
+        margin-inline: 3rem;
+        
+    }
+}
+
+.preparations{
+    background-color: rgb(255, 255, 255);
+    color: rgb(18, 157, 114);
+    &__header{
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__side-button{
+
+    }
+}
