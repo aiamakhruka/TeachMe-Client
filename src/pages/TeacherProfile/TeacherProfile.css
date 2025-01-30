@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.teacher-header {
+  margin-inline: 4rem;
+  margin-top: 4rem;
+  width: 349px;
+  height: 131px;
+  color: #129D72;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.teacher-profile {
+  width: 1200px;
+  display: flex;
+  margin-inline: 2rem;
+  justify-content: space-between;
+}
+.teacher-profile__info {
+  text-align: center;
+  justify-content: center;
+  width: 20%;
+  background-color: #129D72;
+  width: 35rem;
+  height: 899px;
+  border: 3px solid #129D72;
+  margin-bottom: 3rem;
+  border-radius: 4px;
+}
+.teacher-profile__profile-image {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 179px;
+  border-radius: 5%;
+}
+.teacher-profile__inputs {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: left;
+  margin-inline: 6rem;
+  margin-bottom: 3rem;
+}
+
+.teacher-details {
+  width: 1000px;
+  text-align: left;
+}
+.teacher-details__about-me {
+  background-color: #ffffff;
+  display: flex;
+  border: 1px solid #129D72;
+  padding: 2rem;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-inline: 1rem;
+  margin-bottom: 2rem;
+}
+.teacher-details__header {
+  margin-bottom: 2rem;
+  color: #129D72;
+}
+.teacher-details__about {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+}
+
+.teacher-price {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  background-color: #ffffff;
+  margin-inline: 1rem;
+  max-width: 520px;
+  border: 1px solid #129D72;
+  padding: 2rem;
+}
+.teacher-price__title {
+  color: #129D72;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.teacher-price__price {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.teacher-price__button {
+  background-color: #129D72;
+  color: #ffffff;
+  width: 141px;
+  height: 58px;
+  flex-shrink: 0;
+  padding: 0.5rem;
+  border-radius: 32px;
+}
+
+.teacher-reviews {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  background-color: #ffffff;
+  margin-inline: 1rem;
+  border: 1px solid #129D72;
+  max-width: 294px;
+  height: 200px;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.teacher-reviews__title {
+  color: #129D72;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.teacher-reviews__icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+}
+.teacher-reviews__impresion {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.reviews {
+  width: 1184px;
+  height: 513px;
+  display: flex;
+  padding: 3rem;
+  max-width: max-width;
+  align-items: center;
+  border: 1px solid #129D72;
+  flex-direction: column;
+  background-color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  margin-inline: 2rem;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  margin-bottom: 4rem;
+}
+.reviews__header {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #129D72;
+  margin-bottom: 2rem;
+}
+.reviews__cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.reviews__card {
+  margin-inline: 1rem;
+  width: 33%;
+}
+.reviews__review {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.reviews__name {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.reviews__profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+}/*# sourceMappingURL=TeacherProfile.css.map */

@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.card {
+  width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card figure {
+  margin: 0;
+}
+.card figure img {
+  max-width: 100%;
+  height: auto;
+}
+.card__body {
+  margin-top: 20px;
+}
+.card__body h2 {
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+.card__body p {
+  margin-bottom: 5px;
+  width: 50%;
+}
+.card__body button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #28666e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.teacher-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}/*# sourceMappingURL=TeacherCard.css.map */
