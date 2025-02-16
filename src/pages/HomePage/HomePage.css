@@ -39,7 +39,7 @@
   src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
 }
 .hero {
-  background-color: brown;
+  background-color: #129D72;
   width: 100%;
   height: 580px;
   display: flex;

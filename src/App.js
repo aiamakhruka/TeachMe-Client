@@ -12,7 +12,12 @@ import Reviews from './pages/Reviews/Reviews';
 import Booking from './pages/Booking/Booking';
 import MyUpcomingLessonsStudent from './pages/MyUpcomingLessonsStudent/MyUpcomingLessonsStudent';
 import MyUpcomingLessonsTeacher from './pages/MyUpcomingLessonsTeacher/MyUpcomingLessonsTeacher';
-
+import ChemistryBooks from './pages/ChemistryBooks/ChemistryBooks';
+import HistoryBooks from './pages/HistoryBooks/HistoryBooks';
+import CSBooks from './pages/CSBooks/CSBooks';
+import EngineeringBooks from './pages/EngineeringBooks/EngineeringBooks';
+import GeographyBooks from './pages/GeographyBooks/GeographyBooks';
+i
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +38,17 @@ function App() {
         <Route path='/myUpcomingLessonsTeacher' element={<MyUpcomingLessonsTeacher/>}/>
         <Route path='/booking' element={<Booking/>}/>
         <Route path='/reviews' element={<Reviews/>}/>
+        <Route path='/mathBooks' element={<MathBooks/>}/>                            
+        <Route path='/historyBooks'element={<HistoryBooks/>}/>
+        <Route path='/geographyBooks' element={<GeographyBooks/>}/>
+        <Route path='/languageBooks'element={<LanguageBooks/>}/>
+        <Route path='/engineeringBooks'element={<EngineeringBooks/>}/>
+        <Route path='/csBooks'element={<CSBooks/>}/>
+        <Route path='/physicsBooks'element={<PhysicsBooks/>}/>
+        <Route path='/chemistryBooks'element={<ChemistryBooks/>} />
+        
+        
+
       </Routes>
     </BrowserRouter>
   );
