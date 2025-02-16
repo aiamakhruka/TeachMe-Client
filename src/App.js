@@ -37,7 +37,7 @@ function App() {
         <Route path='/myUpcomingLessonsStudent' element={<MyUpcomingLessonsStudent/>}/>
         <Route path='/myUpcomingLessonsTeacher' element={<MyUpcomingLessonsTeacher/>}/>
         <Route path='/booking' element={<Booking/>}/>
-        <Route path='/reviews' element={<Reviews/>}/>
+        {/* <Route path='/reviews' element={<Reviews/>}/>
         <Route path='/mathBooks' element={<MathBooks/>}/>                            
         <Route path='/historyBooks'element={<HistoryBooks/>}/>
         <Route path='/geographyBooks' element={<GeographyBooks/>}/>
@@ -45,7 +45,7 @@ function App() {
         <Route path='/engineeringBooks'element={<EngineeringBooks/>}/>
         <Route path='/csBooks'element={<CSBooks/>}/>
         <Route path='/physicsBooks'element={<PhysicsBooks/>}/>
-        <Route path='/chemistryBooks'element={<ChemistryBooks/>} />
+        <Route path='/chemistryBooks'element={<ChemistryBooks/>} /> */}
         
         
 
