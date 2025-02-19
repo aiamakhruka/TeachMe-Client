@@ -17,6 +17,9 @@ import HistoryBooks from './pages/HistoryBooks/HistoryBooks';
 import CSBooks from './pages/CSBooks/CSBooks';
 import EngineeringBooks from './pages/EngineeringBooks/EngineeringBooks';
 import GeographyBooks from './pages/GeographyBooks/GeographyBooks';
+import MathBooks from './pages/MathBooks/MathBooks';
+import LanguageBooks from './pages/LanguageBooks/LanguageBooks';
+import PhyicBooks from './pages/PhysicsBooks/PhysicsBooks';
 
 function App() {
   return (
@@ -44,7 +47,7 @@ function App() {
         <Route path='/languageBooks'element={<LanguageBooks/>}/>
         <Route path='/engineeringBooks'element={<EngineeringBooks/>}/>
         <Route path='/csBooks'element={<CSBooks/>}/>
-        <Route path='/physicsBooks'element={<PhysicsBooks/>}/>
+        <Route path='/physicsBooks'element={<PhyicBooks/>}/>
         <Route path='/chemistryBooks'element={<ChemistryBooks/>} />
         
         
