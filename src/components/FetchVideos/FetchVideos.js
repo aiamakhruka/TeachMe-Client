@@ -12,7 +12,7 @@ const YouTubePlaylist = ({ playlistId, apiKey }) => {
           {
             params: {
               part: 'snippet',
-              maxResults: 20,
+              maxResults: 100,
               playlistId: playlistId,
               key: apiKey,
             },
