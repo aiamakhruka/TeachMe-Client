@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+form .form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form .form-field {
+  flex: 0 1 calc(50% - 10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+form .form-field label {
+  margin-left: 0.5em;
+  font-size: 1em;
+  color: #333;
+}
+form .form-field input, form .form-field select {
+  width: 75%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+form .form-field select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff;
+}
+form .form-field div {
+  margin-top: 5px;
+  color: red;
+  font-size: 0.9em;
+}
+form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #28666e;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+form button:hover {
+  background: #129D72;
+}/*# sourceMappingURL=AddTeacherpage.css.map */

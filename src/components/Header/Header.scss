@@ -1,0 +1,40 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: $White;
+  
+
+  &__logo{
+    color:$green ;
+    font-style: normal;
+    letter-spacing: 0.25;
+    text-transform: uppercase;
+    @include handleText(2.1875rem,1.2,800);
+    
+  }
+  &__menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+  }
+  &__item{
+    @include handleText(1.1875rem,1.2,600);
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    color: $green;
+
+
+  }
+  &-login{
+    background-color: $green;
+    color: $White;
+    border-radius: 30px;
+
+  }
+}

@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.search-teacher {
+  padding: 1rem 1rem 1rem 5rem;
+  background-color: #ffffff;
+  width: 30%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}/*# sourceMappingURL=TeacherFilter.css.map */

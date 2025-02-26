@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: #ffffff;
+}
+.navbar__logo {
+  color: #129D72;
+  font-style: normal;
+  letter-spacing: 0.25;
+  text-transform: uppercase;
+  font-size: 2.1875rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.navbar__item {
+  font-size: 1.1875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-right: 2rem;
+  color: #129D72;
+}
+.navbar-login {
+  background-color: #129D72;
+  color: #ffffff;
+  border-radius: 30px;
+}/*# sourceMappingURL=Header.css.map */

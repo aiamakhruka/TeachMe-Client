@@ -1,0 +1,67 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .form-field {
+        flex: 0 1 calc(50% - 10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        label {
+            margin-left: .5em;
+            font-size: 1em;
+            color: #333;
+        }
+
+        input, select {
+            width: 75%; 
+            height: 35px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        select {
+            appearance: none;
+            background: #fff;
+        }
+        
+        div {
+            margin-top: 5px;
+            color: red;
+            font-size: 0.9em;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: $button;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+
+        &:hover {
+            background: $green;
+        }
+    }
+}

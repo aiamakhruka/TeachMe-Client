@@ -1,0 +1,16 @@
+.price-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.slider {
+  width: 300px;
+}
+
+.price-label {
+  margin-top: 10px;
+  font-size: 18px;
+}

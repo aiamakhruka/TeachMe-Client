@@ -1,0 +1,42 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  width: 100%;
+  height:2rem;
+  padding:1rem 10rem 0rem 10rem;
+
+  &__logo {
+    margin-left: 2rem;
+    width: 30%;
+    color: $green;
+    font-style: normal;
+    letter-spacing: 0.25;
+    text-transform: uppercase;
+    @include handleText(1.8rem,1, 800);
+  }
+  &__copy-right {
+    margin-right: 0rem;
+
+    width: 30%;
+
+    text-align: center;
+  }
+  &__icons {
+    margin-right: 0rem;
+
+    width: 35%;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}

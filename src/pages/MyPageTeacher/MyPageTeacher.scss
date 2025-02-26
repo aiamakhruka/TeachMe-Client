@@ -1,0 +1,247 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+.teacher-header{
+    margin-inline:4rem ;
+    margin-top: 4rem;
+    width: 349px;
+    height: 131px;
+    color: $green;
+    font-weight: 600;
+    font-size: 50px;
+}
+.teacher-profile{
+    width: 1200px;
+    display: flex;
+    margin-inline:2rem ;
+    justify-content: space-between;
+    &__info{
+        text-align: center;
+        justify-content: center;
+        width: 20%;
+        background-color: $green;
+        width: 35rem;
+        height: 899px;
+        border: 3px solid $green ;
+        margin-bottom: 3rem;
+        border-radius: 4px;
+
+    }
+
+    &__profile-image{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        width:140px;
+        object-fit: cover;
+        height: 179px;
+        border-radius: 5%;
+
+    }
+
+    &__inputs{
+        color: $White;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: left;
+        margin-inline: 6rem;
+        margin-bottom: 3rem;
+
+    }
+}
+.teacher-details{
+    width: 1000px;
+    text-align: left;
+
+    &__about-me{
+        background-color: $White;
+        display: flex;
+        border: 1px  solid $green ;
+        padding: 2rem;
+        flex-direction: column;
+        box-shadow: 5px 5px 10px 0px #d4d4d4;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-inline: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        margin-bottom: 2rem;
+        color:$green;
+    }
+    &__about{
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+    }
+}
+
+
+.myteacher-reviews{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    background-color: $White;
+    margin-inline: 1rem;
+    border: 1px solid $green;
+    padding: 1rem;
+    margin-top: 2rem;
+    height: 250px;
+
+    &__title{
+        margin-left: 3rem;
+        color: $green;
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 1rem;
+        text-align: left;
+        display: inline-block;
+    }
+    &__icon{
+        width: 100%;
+        height: 24px;
+        margin-bottom: 1rem;
+        margin-left: 6rem;
+    }
+    &__impresion{
+        margin-left: 5rem;
+        font-weight: 600;
+        font-size: 30px;
+    }
+    &__button{
+        background-color: $green;
+        color: $White;
+        width: 141px;
+        height: 40px;
+        flex-shrink: 0;
+        padding: 0.5rem;
+        border-radius: 32px ;
+        // margin-top: 1.5rem;
+        margin-left: 7rem;
+    }
+}
+
+
+
+.myteacher-price{
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    background-color: $White;
+    margin-inline: 1rem;
+    // max-width: 520px;
+    height: 220px;
+    border: 1px solid $green;
+    padding: 2rem;
+    margin-top: 2rem;
+    &__title{
+        color: $green;
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 1rem;
+    }
+    &__price{
+        font-weight: 500;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    &__button{
+        background-color: $green;
+        color: $White;
+        width: 141px;
+        height: 58px;
+        flex-shrink: 0;
+        padding: 0.5rem;
+        border-radius: 32px ;
+    }
+}
+
+
+.my-student-header{
+    color: $green;
+    font-size: 2rem;
+    font-weight:700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.my-students-list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.my-student{
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    display: flex;
+    background-color: $White;
+    margin-inline: 1rem;
+    border: 1px solid $green;
+    height: 240px;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    width: 45%;
+    
+    &__image{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        margin-right: 3rem;
+    }
+    &__name{
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+  
+    &__subject{
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+  
+    &__date{
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+  
+}
+
+
+.teacher-Reminder{
+    margin-left: 3rem;
+    display: flex;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    flex-direction: column;
+    &__header{
+        color: $green;
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    &__msg{
+        width: 20rem;
+        margin-bottom: 2rem;
+    }
+    &__image{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+    &__button{
+        margin-top: 2rem;
+        margin-left: 2rem;
+        background-color: $green;
+        color: $White;
+        width: 141px;
+        height: 40px;
+        flex-shrink: 0;
+        padding: 0.5rem;
+        border-radius: 32px ;
+        margin-bottom: 4rem;
+    }
+}

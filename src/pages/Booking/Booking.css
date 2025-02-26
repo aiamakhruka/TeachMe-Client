@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: #ffffff;
+}
+.navbar__logo {
+  color: #129D72;
+  font-style: normal;
+  letter-spacing: 0.25;
+  text-transform: uppercase;
+  font-size: 2.1875rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.navbar__item {
+  font-size: 1.1875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-right: 2rem;
+  color: #129D72;
+}
+.navbar-login {
+  background-color: #129D72;
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.profile-bg {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../../assets/images/bg.jpeg");
+  background-repeat: no-repeat;
+}
+.profile-bg__avatar {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 166px;
+  top: 208px;
+  left: 100px;
+  position: absolute;
+  margin-right: 1rem;
+  height: 200px;
+}
+.profile-bg__header {
+  font-size: 60px;
+  position: absolute;
+  top: 270px;
+  left: 400px;
+  width: 733px;
+  height: 111px;
+  padding-right: 27px;
+  color: rgb(18, 157, 114);
+}
+
+.sub-header {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 5rem 8rem 4rem 28rem;
+  width: 360px;
+  background-color: rgb(18, 157, 114);
+}
+
+.lesson-info {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20rem;
+}
+.lesson-info__left {
+  display: flex;
+  color: rgb(18, 157, 114);
+}
+.lesson-info__right {
+  width: 200px;
+  height: 250px;
+}
+.lesson-info__details {
+  width: 33%;
+}
+.lesson-info__headers {
+  margin-bottom: 2rem;
+}
+
+.request-box {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  margin-top: 4rem;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  margin-inline: 8rem;
+}
+.request-box__header {
+  color: rgb(18, 157, 114);
+  font-size: 2.5rem;
+  margin-inline: 4rem;
+  margin-bottom: 1.5rem;
+}
+.request-box__paragraphy {
+  font-size: 1.5rem;
+  margin-inline: 3rem;
+}
+
+.preparations {
+  background-color: rgb(255, 255, 255);
+  color: rgb(18, 157, 114);
+}
+.preparations__header {
+  font-size: 2rem;
+  text-align: center;
+}/*# sourceMappingURL=Booking.css.map */
