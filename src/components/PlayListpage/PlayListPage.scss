@@ -5,6 +5,7 @@
 .playlist-page {
   padding: 20px;
   text-align: center;
+  background-color: $green;
 
   h1 {
     font-size: 2rem;
@@ -17,5 +18,14 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+  }
+  
+  .playlist_title{
+    font-size: 35px;
+    color: #000000;
+   background-color:#e4e1bc;
+   border-radius: 1rem;
+   padding: 1rem 0rem;
+   margin: 1rem 2rem;
   }
 }

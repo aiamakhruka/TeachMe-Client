@@ -20,7 +20,7 @@ import GeographyBooks from './pages/GeographyBooks/GeographyBooks';
 import MathBooks from './pages/MathBooks/MathBooks';
 import LanguageBooks from './pages/LanguageBooks/LanguageBooks';
 import PhyicBooks from './pages/PhysicsBooks/PhysicsBooks';
-
+import PlaylistPage from './components/PlayListpage/PlayListPage';
 // import firebase from 'firebase/app'
 // import 'firebase/firestore';
 // import 'firebase/auth';
@@ -81,8 +81,7 @@ function App() {
         <Route path='/csBooks'element={<CSBooks/>}/>
         <Route path='/physicsBooks'element={<PhyicBooks/>}/>
         <Route path='/chemistryBooks'element={<ChemistryBooks/>} />
-        
-        
+        <Route path="/playlist/:playlistId" element={<PlaylistPage />} /> {/* Add this route */}
 
       </Routes>
     </BrowserRouter>

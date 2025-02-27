@@ -1,1 +1,92 @@
-/*# sourceMappingURL=ChemistryBooks.css.map */
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 400;
+  src: url(../../assets/fonts/Faustina-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Faustina";
+  font-weight: 600;
+  src: url(../../assets/fonts/Faustina-Italic-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 400;
+  src: url(../../assets/fonts/Urbanist-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Urbanist";
+  font-weight: 600;
+  src: url(../../assets/fonts/Urbanist-Italic-VariableFont_wght.ttf) format("opentype");
+}
+.hero-playlist {
+  display: flexbox;
+  flex-wrap: wrap;
+  background-color: #129D72;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+.hero-playlist .title {
+  font-size: 35px;
+  color: #000000;
+  margin: 0.5rem 0rem 2rem 5rem;
+  background-color: rgb(228, 225, 188);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  width: 19rem;
+}
+.hero-playlist .playlist-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.hero-playlist .playlist-container .playlist-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.hero-playlist .playlist-container .playlist-button:hover {
+  transform: scale(1.05);
+}
+.hero-playlist .playlist-container .playlist-button img {
+  width: 20rem;
+  height: 14rem;
+  margin: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.hero-playlist .playlist-container .playlist-button .playlist-name {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}/*# sourceMappingURL=ChemistryBooks.css.map */

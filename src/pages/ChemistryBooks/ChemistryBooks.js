@@ -1,118 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FetchVideos from "../../components/FetchVideos/FetchVideos";
 import OpenStaxBook from "../../components/FetchBooks/FetchBooks";
 import Header from "../../components/Header/Header";
-import './ChemistryBooks.scss'; // Import the SCSS file
+import './ChemistryBooks.scss';
 import Footer from "../../components/Footer/Footer";
 
 function ChemistryBooks() {
-  // OpenStax Book Example
-  <OpenStaxBook 
-    bookTitle="Algebra and Trigonometry" 
-    bookUrl="https://openstax.org/books/algebra-and-trigonometry/pages/1-introduction"
-  />
+  const [playlists, setPlaylists] = useState([]); // State to store playlists
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+  const apiKey = "AIzaSyDd5WSWpm_HmfC07XK25MXT8paVZHP2Vqg"; // Replace with your API key
+  const channelId = "UCX6b17PVsYBQ0ip5gyeme-Q"; // Crash Course Channel ID
 
-  // Playlist data for different chemistry topics
-  const chemistryPlaylists = [
-    {
-      id: "PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr", // General Chemistry
-      name: "General Chemistry",
-      thumbnail: "https://img.youtube.com/vi/bSMx0NS0XfY/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtOfse2ncvffeelTrqvhrz8H", // Organic Chemistry
-      name: "Organic Chemistry",
-      thumbnail: "https://img.youtube.com/vi/QXTjOe70b3I/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    },
-    {
-      id: "PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4", // Biochemistry
-      name: "Biochemistry",
-      thumbnail: "https://img.youtube.com/vi/UYl4fE4GDfw/hqdefault.jpg"
-    }
-  ];
+  // Fetch playlists from YouTube
+  useEffect(() => {
+    const fetchPlaylists = async () => {
+      try {
+        const response = await fetch(
+          `https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=${channelId}&maxResults=100&key=${apiKey}`
+        );
+        const data = await response.json();
+        setPlaylists(data.items); // Store fetched playlists
+      } catch (error) {
+        console.error("Error fetching playlists:", error);
+      } finally {
+        setIsLoading(false); // Set loading to false
+      }
+    };
 
-  // State to track the selected playlist
-  const [selectedPlaylistId, setSelectedPlaylistId] = useState("");
+    fetchPlaylists();
+  }, [apiKey, channelId]);
 
- // Handle button click to open a new window with the playlist
- const handlePlaylistClick = (playlistId) => {
-  const newWindow = window.open("", "_blank");
-  newWindow.document.write(`
-    <html>
-      <head>
-        <title>Playlist Videos</title>
-        <link rel="stylesheet" href="/path/to/your/styles.css" />
-      </head>
-      <body>
-        <div id="root"></div>
-        <script src="/path/to/your/PlaylistPage.js"></script>
-        <script>
-          ReactDOM.render(
-            React.createElement(PlaylistPage, { playlistId: "${playlistId}" }),
-            document.getElementById('root')
-          );
-        </script>
-      </body>
-    </html>
-  `);
-  newWindow.document.close();
-};
+  // Handle button click to open a new window with the playlist
+  const handlePlaylistClick = (playlistId) => {
+    window.open(`/playlist/${playlistId}`, "_blank");
+  };
 
   return (
     <>
       <Header />
       <div className="hero-playlist">
-        <h1 className="title">Chemistry Books</h1>
-        <div className="playlist-container">
-          {chemistryPlaylists.map((playlist) => (
-            <button
-              key={playlist.id}
-              onClick={() => handlePlaylistClick(playlist.id)}
-              className="playlist-button"
-            >
-              <img
-                src={playlist.thumbnail}
-                alt={playlist.name}
-              />
-              <div className="playlist-name">{playlist.name}</div>
-            </button>
-          ))}
-        </div>
-
-        {/* Render the selected playlist */}
-        {selectedPlaylistId && (
-          <FetchVideos
-            playlistId={selectedPlaylistId}
-            apiKey={"AIzaSyDd5WSWpm_HmfC07XK25MXT8paVZHP2Vqg"}
-          />
+        <h1 className="title">Crash Course Playlists</h1>
+        {isLoading ? (
+          <div className="loading-spinner">Loading playlists...</div>
+        ) : (
+          <div className="playlist-container">
+            {playlists.map((playlist) => (
+              <button
+                key={playlist.id}
+                onClick={() => handlePlaylistClick(playlist.id)}
+                className="playlist-button"
+              >
+                <img
+                  src={playlist.snippet.thumbnails.medium.url}
+                  alt={playlist.snippet.title}
+                />
+                <div className="playlist-name">{playlist.snippet.title}</div>
+              </button>
+            ))}
+          </div>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
