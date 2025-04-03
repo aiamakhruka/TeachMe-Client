@@ -1,68 +1,102 @@
-import React, { useEffect, useState } from "react";
-import FetchVideos from "../../components/FetchVideos/FetchVideos";
-import OpenStaxBook from "../../components/FetchBooks/FetchBooks";
-import Header from "../../components/Header/Header";
-import './ChemistryBooks.scss';
-import Footer from "../../components/Footer/Footer";
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import Header from "../../components/Header/Header";
+// import './ChemistryBooks.scss'; // Ensure this file exists
+// import Footer from "../../components/Footer/Footer";
 
-function ChemistryBooks() {
-  const [playlists, setPlaylists] = useState([]); // State to store playlists
-  const [isLoading, setIsLoading] = useState(true); // Loading state
-  const apiKey = "AIzaSyDd5WSWpm_HmfC07XK25MXT8paVZHP2Vqg"; // Replace with your API key
-  const channelId = "UCX6b17PVsYBQ0ip5gyeme-Q"; // Crash Course Channel ID
+// // Import local thumbnails
+// import thumbnail1 from "https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnCmsASI-hO0QDnDfn1TaMbLcSDQ";
+// import thumbnail2 from "https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnCmsASI-hO0QDnDfn1TaMbLcSDQ";
+// import thumbnail3 from "https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnCmsASI-hO0QDnDfn1TaMbLcSDQ";
+// import thumbnail4 from "https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnCmsASI-hO0QDnDfn1TaMbLcSDQ";
+// import thumbnail5 from "https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnCmsASI-hO0QDnDfn1TaMbLcSDQ";
 
-  // Fetch playlists from YouTube
-  useEffect(() => {
-    const fetchPlaylists = async () => {
-      try {
-        const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=${channelId}&maxResults=100&key=${apiKey}`
-        );
-        const data = await response.json();
-        setPlaylists(data.items); // Store fetched playlists
-      } catch (error) {
-        console.error("Error fetching playlists:", error);
-      } finally {
-        setIsLoading(false); // Set loading to false
-      }
-    };
 
-    fetchPlaylists();
-  }, [apiKey, channelId]);
+// function ChemistryBooks() {
+//   // Static playlist data with local thumbnails
+//   const playlists = [
+//     {
+//       id: "PL8dPuuaLjXtNjasccl-WajpONGX3zoY4M",
+//       snippet: {
+//         title: "Organic Chemistry Basics",
+//         thumbnails: {
+//           medium: {
+//             url: thumbnail1, // Use local thumbnail
+//           },
+//         },
+//       },
+//     },
+//     {
+//       id: "PL8dPuuaLjXtMwV2btpcij8S3YohW9gUGN",
+//       snippet: {
+//         title: "Inorganic Chemistry",
+//         thumbnails: {
+//           medium: {
+//             url: thumbnail2, // Use local thumbnail
+//           },
+//         },
+//       },
+//     },
+//     {
+//       id: "PL8dPuuaLjXtMwmepBjTSG593eG7ObzO7s",
+//       snippet: {
+//         title: "Physical Chemistry Concepts",
+//         thumbnails: {
+//           medium: {
+//             url: thumbnail3, // Use local thumbnail
+//           },
+//         },
+//       },
+//     },
+//     {
+//       id: "PL8dPuuaLjXtNjasccl-WajpONGX3zoY4M",
+//       snippet: {
+//         title: "Chemical Reactions",
+//         thumbnails: {
+//           medium: {
+//             url: thumbnail4, // Use local thumbnail
+//           },
+//         },
+//       },
+//     },
+//     {
+//       id: "PL8dPuuaLjXtNjasccl-WajpONGX3zoY4M",
+//       snippet: {
+//         title: "Periodic Table Explained",
+//         thumbnails: {
+//           medium: {
+//             url: thumbnail5, // Use local thumbnail
+//           },
+//         },
+//       },
+//     },
+//   ];
 
-  // Handle button click to open a new window with the playlist
-  const handlePlaylistClick = (playlistId) => {
-    window.open(`/playlist/${playlistId}`, "_blank");
-  };
+//   return (
+//     <>
+//       <Header />
+//       <div className="hero-playlist">
+//         <h1 className="title">Chemistry Playlists</h1>
+//         <div className="playlist-container">
+//           {playlists.map((playlist) => (
+//             <Link
+//               key={playlist.id}
+//               to={`/playlist/${playlist.id}`}
+//               className="playlist-button"
+//             >
+//               <img
+//                 src={playlist.snippet.thumbnails.medium.url}
+//                 alt={playlist.snippet.title}
+//                 className="playlist-thumbnail"
+//               />
+//               <div className="playlist-name">{playlist.snippet.title}</div>
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+//       <Footer />
+//     </>
+//   );
+// }
 
-  return (
-    <>
-      <Header />
-      <div className="hero-playlist">
-        <h1 className="title">Crash Course Playlists</h1>
-        {isLoading ? (
-          <div className="loading-spinner">Loading playlists...</div>
-        ) : (
-          <div className="playlist-container">
-            {playlists.map((playlist) => (
-              <button
-                key={playlist.id}
-                onClick={() => handlePlaylistClick(playlist.id)}
-                className="playlist-button"
-              >
-                <img
-                  src={playlist.snippet.thumbnails.medium.url}
-                  alt={playlist.snippet.title}
-                />
-                <div className="playlist-name">{playlist.snippet.title}</div>
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-      <Footer />
-    </>
-  );
-}
-
-export default ChemistryBooks;
+// export default ChemistryBooks;

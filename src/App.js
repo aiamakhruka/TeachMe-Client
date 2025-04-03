@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-          <section>{user ? <ChatRoom /> : <SignIn />}</section>
+          {/* <section>{user ? <ChatRoom /> : <SignIn />}</section> */}
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
@@ -73,15 +73,15 @@ function App() {
         <Route path='/myUpcomingLessonsTeacher' element={<MyUpcomingLessonsTeacher/>}/>
         <Route path='/booking' element={<Booking/>}/>
         <Route path='/reviews' element={<Reviews/>}/>
+        <Route path='/historyBooks' element={<HistoryBooks/>}/>
         <Route path='/mathBooks' element={<MathBooks/>}/>                            
-        <Route path='/historyBooks'element={<HistoryBooks/>}/>
         <Route path='/geographyBooks' element={<GeographyBooks/>}/>
         <Route path='/languageBooks'element={<LanguageBooks/>}/>
         <Route path='/engineeringBooks'element={<EngineeringBooks/>}/>
         <Route path='/csBooks'element={<CSBooks/>}/>
         <Route path='/physicsBooks'element={<PhyicBooks/>}/>
         <Route path='/chemistryBooks'element={<ChemistryBooks/>} />
-        <Route path="/playlist/:playlistId" element={<PlaylistPage />} /> {/* Add this route */}
+        <Route path="/playlist/:playlistId" element={<PlaylistPage />} /> 
 
       </Routes>
     </BrowserRouter>
